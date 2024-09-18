@@ -1,0 +1,87 @@
+/* src/styles/Blog.module.css */
+
+.blogContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blogTitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #1E3A8A; /* Azul profundo para coincidir con el color principal */
+}
+
+.blogDate {
+  font-size: 0.9rem;
+  color: #6B7280; /* Gris elegante */
+  margin-bottom: 20px;
+}
+
+.blogContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151; /* Gris oscuro para legibilidad */
+}
+
+.blogList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.blogListItem {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #E5E7EB; /* Borde ligero */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogListItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blogLink {
+  text-decoration: none;
+  color: #1E3A8A; /* Azul profundo */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.blogLink:hover {
+  text-decoration: underline;
+  color: #10B981; /* Verde fresco para el hover */
+}
+
+.blogHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blogHeader h1 {
+  font-size: 3rem;
+  color: #1E3A8A; /* Azul profundo */
+  margin-bottom: 10px;
+}
+
+.blogHeader p {
+  font-size: 1.2rem;
+  color: #6B7280; /* Gris elegante */
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #F3F4F6; /* Gris claro */
+  border-left: 4px solid #10B981; /* Verde fresco */
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}

@@ -1,0 +1,146 @@
+.blogPostPage {
+  display: flex;
+  gap: 20px; /* Espacio entre el contenido principal y el sidebar */
+  padding: 20px;
+  max-width: 1200px; /* Ancho máximo del contenedor principal */
+  margin: 2rem auto;
+}
+
+/* Contenido principal */
+.mainContent {
+  flex: 3;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1;
+  width: 300px;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 20px;
+}
+
+.blogPost h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.blogPost p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.blogImageContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blogImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.blogImage:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.hashtags {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hashtag {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.content strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Background effect */
+.mainContent {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('/images/rain-effect.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Responsividad para pantallas pequeñas */
+
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .blogPostPage {
+    flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+    padding: 10px;
+  }
+
+  .mainContent {
+    flex: none; /* Quita el flex para que tome el ancho completo */
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    flex: none; /* Quita el flex para que tome el ancho completo */
+    width: 100%; /* Asegura que el sidebar tome el ancho completo */
+    margin-top: 20px; /* Añade un margen superior para separar del contenido principal */
+    position: relative; /* Cambia a relative para que no sea sticky en móvil */
+    display: flex; /* Cambia el display a flex para que los elementos se alineen horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no caben en una línea */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+
+  .ad {
+    flex: 1 1 200px; /* Permite que los elementos se expandan y contraigan, con un ancho mínimo de 200px */
+    margin-bottom: 10px; /* Espacio entre los anuncios */
+  }
+
+  .adImage {
+    width: 10%; /* Asegura que las imágenes tomen el ancho completo del contenedor */
+  }
+
+  .blogPost h1 {
+    font-size: 2rem; /* Ajusta el tamaño de la fuente para móvil */
+  }
+
+  .hashtag {
+    font-size: 0.75rem; /* Ajusta el tamaño de los hashtags para móvil */
+  }
+}

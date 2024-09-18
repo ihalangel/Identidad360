@@ -1,0 +1,88 @@
+'use client'
+import { useState, useRef } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import Logo from '@public/images/logoIdentidad360_25px.png'; // Ajusta la ruta según sea necesario
+import Modal from './Modal';
+
+
+const Header: React.FC = () => {
+ const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleNavLinkClick = () => {
+    setIsMobileMenuOpen(false); // Cierra el menú móvil al hacer clic en un enlace
+  };
+
+
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    const customLabel = 'H Solicitar Cotización';
+    
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'Botón',
+        event_label: customLabel,
+        value: 1,
+      });
+    }
+  };
+
+  const closeModal = () => setIsModalOpen(false);
+
+
+  return (<>
+    <header className="bg-primary text-white w-full box-border p-4">
+      <div className="flex items-center justify-between">
+        <Link href="/">
+          <Image 
+            src={Logo} 
+            alt="Logo de IdentidadDigital360" 
+            className="w-20 h-auto" // Aquí ajustas el tamaño del logo
+          />
+        </Link>
+        <nav className="hidden md:flex space-x-4">
+          <Link href="/blog">
+            <span className="text-white hover:text-gray-300 transition-colors duration-300">Blog</span>
+          </Link>
+          <a href="/#servicios" className="text-white hover:text-gray-300 transition-colors duration-300">Servicios</a>
+          <a href="/#precios" className="text-white hover:text-gray-300 transition-colors duration-300">Precios</a>
+          <a href="#" className="text-white hover:text-gray-300 transition-colors duration-300" 
+          onClick={openModal} >Contacto</a>
+        </nav>
+        <button 
+          id="mobile-menu-btn" 
+          className="text-3xl md:hidden bg-none border-none text-white cursor-pointer"
+          onClick={toggleMobileMenu}
+        >
+          &#9776;
+        </button>
+      </div>
+      <nav 
+        ref={mobileMenuRef}
+        id="nav-menu" 
+        className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} absolute top-16 right-0 bg-primary w-full p-4 z-50`}
+      >
+        <Link href="./#servicios">
+          <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Servicios</span>
+        </Link>
+        <Link href="./#precios">
+          <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Precios</span>
+        </Link>
+        <Link href="./#contacto">
+          <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Contacto</span>
+        </Link>
+      </nav>
+    </header>
+    <Modal isOpen={isModalOpen} onClose={closeModal} />
+    </>
+  );
+};
+
+export default Header;

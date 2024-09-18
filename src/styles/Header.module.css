@@ -1,0 +1,96 @@
+/* Header.module.css */
+.header {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+  padding: 1rem;
+}
+
+/* Contenedor de la navegación */
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para el logo */
+.header__logo {
+  width: 5rem;
+  height: auto; /* Ajusta según el tamaño deseado */
+}
+
+/* Menú de navegación para pantallas grandes */
+.header__navDesktop {
+  display: flex; /* Muestra el menú en pantallas grandes */
+}
+
+/* Estilos para los ítems del menú */
+.header__navItem {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.header__navItem:hover {
+  color: #CCCCCC;
+}
+
+/* Botón de menú móvil */
+.header__mobileMenuBtn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: none; /* Oculta el botón en pantallas grandes */
+}
+
+/* Menú móvil */
+.header__mobileMenu {
+  display: none; /* Oculta el menú móvil por defecto */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__navDesktop {
+    display: none; /* Oculta el menú de escritorio en pantallas pequeñas */
+  }
+
+  .header__navItem {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .header__mobileMenuBtn {
+    display: block; /* Muestra el botón de menú móvil en pantallas pequeñas */
+  }
+
+  .header__mobileMenu.active {
+    display: block;
+    position: absolute;
+    top: 4rem; /* Ajusta según el diseño */
+    right: 0;
+    background-color: #1E3A8A;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+  }
+
+  .header__mobileMenu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .header__mobileMenu a:hover {
+    color: #CCCCCC;
+  }
+}

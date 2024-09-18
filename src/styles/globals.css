@@ -1,0 +1,37 @@
+/* Estilos globales */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Paleta de colores */
+:root {
+  --color-primary: #1E3A8A; /* Azul profundo */
+  --color-secondary-green: #10B981; /* Verde fresco */
+  --color-secondary-gray: #6B7280; /* Gris elegante */
+  --color-accent: #FBBF24; /* Amarillo vibrante */
+  --color-neutral-light: #F9FAFB; /* Gris claro (opcional) */
+  --color-neutral-dark: #333333; /* Gris oscuro (opcional) */
+  --color-text: #333333; /* Gris oscuro para texto */
+  --color-background: #FFFFFF; /* Blanco para el fondo */
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+

@@ -1,0 +1,27 @@
+/* Servicios */
+.services {
+  padding: 2rem;
+}
+
+.services__title {
+  margin-bottom: 1.5rem; /* Espaciado debajo del título */
+  color: #1E3A8A; /* Color del título */
+}
+
+.services__item {
+  background-color: #ffffff; /* Color de fondo de los ítems */
+  padding: 1rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 1rem; /* Espaciado externo */
+  display: flex; /* Flexbox para centrar el contenido */
+  flex-direction: column; /* Contenido en columna */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 640px) {
+  .services__item {
+    padding: 0.5rem; /* Ajusta el espaciado para pantallas pequeñas */
+  }
+}

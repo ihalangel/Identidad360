@@ -1,0 +1,22 @@
+
+/* Footer */
+.footer {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer__nav {
+  margin-top: 1rem;
+}
+
+.footer__nav-item {
+  margin: 0 0.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__nav-item:hover {
+  color: #CCCCCC;
+}
