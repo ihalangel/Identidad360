@@ -1,11 +1,31 @@
 import { notFound } from 'next/navigation';
-import { getPostBySlug } from '@/utils/posts';
+import { getPostBySlug, getAllPostSlugs } from '@/utils/posts';
 import BlogPost from '@/components/blog/BlogPost';
+// import { BlogPostType } from '@type/index.d.ts';
+import type { BlogPostType } from '@type/index.d.ts'; // Ajusta la ruta según la ubicación de tu archivo de tipos
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+
+interface Params {
+  slug: string;
+}
+
+// Genera rutas estáticas en el momento de la construcción
+export async function generateStaticParams() {
+  const slugs = await getAllPostSlugs(); // Obtiene todos los slugs disponibles
+
+  return slugs.map(({ slug }: { slug: string }) => ({
+    slug,
+  }));
+}
+
+// Genera los metadatos para la página estática
+export async function generateMetadata({ params }: { params: Params }) {
   const post = await getPostBySlug(params.slug);
   if (!post) {
-    notFound();
+    return {
+      title: 'Post not found',
+      description: 'No description available',
+    };
   }
 
   return {
@@ -16,8 +36,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 // Tu componente de página
-const BlogPostPage = async ({ params }: { params: { slug: string } }) => {
-  const post = await getPostBySlug(params.slug);
+const BlogPostPage = async ({ params }: { params: Params }) => {
+  const post: BlogPostType | null = await getPostBySlug(params.slug);
 
   if (!post) {
     return <div>Post not found</div>;

@@ -20,4 +20,12 @@ export async function getPostBySlug(slug: string) {
   return post || null; // Devuelve null si no se encuentra el post
 }
 
+// Devuelve todos los slugs disponibles para la generación estática de rutas
+export async function getAllPostSlugs() {
+  const fileContents = fs.readFileSync(postsFilePath, 'utf8');
+  const posts = JSON.parse(fileContents);
 
+  // Extrae los slugs de todos los posts
+  const slugs = posts.map((post: any) => ({ slug: post.url }));
+  return slugs;
+}
