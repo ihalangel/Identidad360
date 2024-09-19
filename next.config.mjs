@@ -1,42 +1,18 @@
-/** @type {import('next').NextConfig} */
+ /** @type {import('next').NextConfig} */
+
+const isProd = process.env.NODE_ENV === 'production'; // Detecta si estás en producción
+
 const nextConfig = {
-  // Habilitar el uso de imágenes externas si es necesario
-  // images: {
-  //   domains: ['example.com'], // Añade dominios desde los cuales se pueden cargar imágenes
-  // },
-
-  // Configuración de rutas personalizadas
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/about',
-  //       destination: '/about-us',
-  //     },
-  //   ];
-  // },
-
-  // Configuración de redirecciones
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/old-path',
-  //       destination: '/new-path',
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
-
   // Otras configuraciones
-  // poweredByHeader: false, // Opcional: desactiva el encabezado X-Powered-By
-  // compress: true, // Opcional: habilita la compresión de respuestas
-
-
-
-  // webpack(config) {
-  //   // Personalización del webpack si es necesario
-  //   return config;
-  // },
+  output: 'export',  // Asegura que el sitio se exporte de manera estática
+  images: {
+    unoptimized: true,  // Las imágenes deben estar desoptimizadas para exportación estática
+  },
+  assetPrefix: isProd ? '/Identidad360/' : '',  // Prefijo para servir los activos estáticos correctamente en producción
+  basePath: isProd ? '/Identidad360' : '',  // Base path para rutas correctas en producción
+  // Otros ajustes opcionales
 };
 
 export default nextConfig;
+
 
