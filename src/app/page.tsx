@@ -14,15 +14,22 @@ export default function HomePage() {
       <Head>
         <title>Identidad360 - Tu solución digital</title>
         <meta name="description" content="Bienvenido a Identidad360, donde ofrecemos soluciones digitales profesionales y accesibles para tu negocio." />
-        {/* Agrega otros metadatos como Open Graph tags aquí si es necesario */}
+        <meta property="og:title" content="Identidad360 - Tu solución digital" />
+        <meta property="og:description" content="Bienvenido a Identidad360, donde ofrecemos soluciones digitales profesionales y accesibles para tu negocio." />
+        <meta property="og:image" content="/path-to-image.jpg" />
+        <meta property="og:url" content="https://www.identidad360.com" />
+        <meta name="keywords" content="diseño web, soluciones digitales, branding, marketing" />
+        {/* Agrega otros metadatos aquí si es necesario */}
       </Head>
       <Hero />
       <Services />
-     <Precios />
-       <Portafolio />
-     <Testimonios />
-       <Contacto />
-        <WhatsappButton />
+      <Precios />
+      <Portafolio />
+      <Testimonios />
+      <Contacto />
+      <WhatsappButton />
     </>
   );
 }
+
+
