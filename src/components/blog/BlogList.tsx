@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { BlogPostType } from '@type/index'; // Ajusta el path según la ubicación de tu archivo de tipos
+import { BlogPostType } from '@type/index'; // Ajusta el path según la ubicación de tu archivo de tiposimport Image from 'next/image';
+import Image from 'next/image';
+
+
 
 interface BlogListProps {
   posts: BlogPostType[];
@@ -12,12 +15,19 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
         {posts.map(post => (
           <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
             <Link href={`/blog/${post.url}`} className="block">
-              <img 
-                src={post.image} 
-                alt={post.title} 
-                className="w-full h-48 object-cover" 
-                loading="lazy" // Mejora el rendimiento al cargar imágenes solo cuando están en el viewport
-              />
+
+
+
+<Image 
+  src={post.image} 
+  alt={post.title} 
+   width={500} // Puedes ajustar el tamaño según lo que necesites
+   height={192} // Equivalente a la altura "h-48"
+  className="w-full h-48 object-cover"
+  loading="lazy" // Next.js maneja la carga diferida automáticamente
+/>
+
+
               <div className="p-4">
                 <header>
                   <h2 className="text-xl font-semibold mb-2">{post.title}</h2>

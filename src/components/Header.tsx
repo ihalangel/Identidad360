@@ -45,6 +45,8 @@ const Header: React.FC = () => {
             src={Logo} 
             alt="Logo de IdentidadDigital360" 
             className="w-20 h-auto" // Aquí ajustas el tamaño del logo
+            width={30} // Ancho de la imagen en proporción
+            height={30} // Altura de la imagen en proporción
           />
         </Link>
         <nav className="hidden md:flex space-x-4">

@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const handleAcceptCookies = () => {
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', 'G-XXXXXXXXXX', { 'cookie_flags': 'SameSite=None;Secure' });
+    window.gtag('config', 'G-9R4Q3DF83V', { 'cookie_flags': 'SameSite=None;Secure' });
   };
 
   return (

@@ -20,7 +20,7 @@ export interface BlogPostType {
 export interface Advertisement {
   title: string;
   description: string;
-  imageUrl: string;
+  ImageUrl: string;
   link: string;
 }
 
