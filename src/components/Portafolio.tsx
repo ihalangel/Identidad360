@@ -3,15 +3,12 @@
 import React from 'react';
 import Image from 'next/image'; // Usar el componente Image de Next.js
 import styles from '@/styles/Portfolio.module.css'; // Importa el CSS como módulo
-import LadingImg from '../../public/images/planes/landing.png';
-import BussinesImg from '../../public/images/planes/bussines.png';
-import EcommerceImg from '../../public/images/planes/ecommerce.png';
 
 const projects = [
   {
     id: 1,
     href: "/landing.html",
-    imgSrc: LadingImg,
+    imgSrc: "/images/planes/landing.webp",
     altText: "Proyecto de Landing Page",
     title: "Landing Page",
     description: "Página de aterrizaje venta de un producto específico.",
@@ -20,7 +17,7 @@ const projects = [
   {
     id: 2,
     href: "/bussines.html",
-    imgSrc: BussinesImg,
+    imgSrc: "/images/planes/bussines.webp",
     altText: "Proyecto de Barbería",
     title: "Sitio Web para Contadores",
     description: "Diseño responsivo para una firma de contadores.",
@@ -29,7 +26,7 @@ const projects = [
   {
     id: 3,
     href: "/ecommerce.html",
-    imgSrc: EcommerceImg,
+    imgSrc: "/images/planes/ecommerce.webp",
     altText: "Proyecto de E-commerce",
     title: "Tienda en Línea de Mascotas",
     description: "Plataforma e-commerce completa con catálogo y pasarela de pago.",
@@ -64,8 +61,11 @@ const Portfolio: React.FC = () => {
                 src={project.imgSrc} 
                 alt={project.altText} 
                 className="w-full h-64 object-cover mb-4" 
-                layout="responsive"
-              />
+               width={1920} 
+        height={1080} 
+        layout="responsive" // Hace que la imagen sea responsive
+        priority
+      />
               <h3 className="text-2xl font-semibold text-blue-900">{project.title}</h3>
               <p className="text-gray-700">{project.description}</p>
               <blockquote className="mt-4 italic text-gray-600">{project.quote}</blockquote>

@@ -1,91 +1,136 @@
 import React from 'react';
-import styles from './../styles/Precios.module.css'; // Asegúrate de que la ruta es correcta
 
 const Precios: React.FC = () => {
   return (
-    <section id="precios" className={`${styles.precios} py-12 bg-gray-100`}>
-      <div className="container mx-auto">
-        <h3 className={`${styles.precios__title} text-3xl font-bold text-center mb-8`} data-aos="fade-up">
+    <section id="precios" className="py-12 bg-gray-100">
+      <div className="container mx-auto max-w-screen-lg">
+        <h3 className="text-3xl font-bold text-center text-blue-800 mb-8" data-aos="fade-up">
           Nuestros Planes
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className={styles.precios__item} data-aos="fade-right">
-            <div className={styles.precios__content}>
-              {/* Descomentar e importar las imágenes si las tienes en Next.js */}
-              {/* <Image
-                src="/assets/images/planes/joven-apoyado-nbgr.webp"
-                alt="Landing Page"
-                className={styles.precios__image}
-                layout="responsive"
-                width={500}
-                height={500}
-              /> */}
-              <h4 className={styles.precios__planTitle}>Landing Page </h4>
-              <ul className={styles.precios__list}>
-                <li className={styles.precios__listItem}>Certificado de Seguridad SSL</li>
-                <li className={styles.precios__listItem}>Diseño web a medida basado en bloques de contenido</li>
-                <li className={styles.precios__listItem}>Formulario de contacto</li>
-                <li className={styles.precios__listItem}>Página responsive</li>
-                <li className={styles.precios__listItem}>Adaptación para compartir en RRSS</li>
-                <li className={styles.precios__listItem}>Hosting por 1 año</li>
-                <li className={styles.precios__listItem}>Dominio por 1 año</li>
+          {/* Plan Landing Page */}
+          <div className="bg-white rounded-lg shadow-lg p-8" data-aos="fade-right">
+            <div>
+              <h4 className="text-xl font-bold text-blue-800 mb-4">Landing Page</h4>
+              <ul className="space-y-3 mb-6">
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Certificado de Seguridad SSL
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Diseño web a medida basado en bloques de contenido
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Formulario de contacto
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Página responsive
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Adaptación para compartir en RRSS
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Hosting por 1 año
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Dominio por 1 año
+                </li>
               </ul>
-              <button className={styles.precios__button}>Solicita tu Landing Page</button>
+              <button className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition transform hover:translate-y-[-2px]">
+                Solicita tu Landing Page
+              </button>
             </div>
           </div>
-          <div className={styles.precios__item} data-aos="fade-up" data-aos-delay="100">
-            <div className={styles.precios__content}>
-              {/* <Image
-                src="/assets/images/planes/maquetaweb.jpg"
-                alt="Corporativa"
-                className={styles.precios__image}
-                layout="responsive"
-                width={500}
-                height={500}
-              /> */}
-              <h4 className={styles.precios__planTitle}>Corporativa </h4>
-              <ul className={styles.precios__list}>
-                <li className={styles.precios__listItem}>5 secciones o páginas</li>
-                <li className={styles.precios__listItem}>15 correos electrónicos corporativos</li>
-                <li className={styles.precios__listItem}>Formulario de contacto</li>
-                <li className={styles.precios__listItem}>Página responsive</li>
-                <li className={styles.precios__listItem}>Adaptación para compartir en RRSS</li>
-                <li className={styles.precios__listItem}>Página SEO optimizada</li>
-                <li className={styles.precios__listItem}>Adaptación con Google Analytics</li>
-                <li className={styles.precios__listItem}>Sistema de contenidos</li>
-                <li className={styles.precios__listItem}>Hosting por 1 año</li>
-                <li className={styles.precios__listItem}>Dominio por 1 año</li>
+
+          {/* Plan Corporativa */}
+          <div className="bg-white rounded-lg shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h4 className="text-xl font-bold text-blue-800 mb-4">Corporativa</h4>
+              <ul className="space-y-3 mb-6">
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> 5 secciones o páginas
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> 15 correos electrónicos corporativos
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Formulario de contacto
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Página responsive
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Adaptación para compartir en RRSS
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Página SEO optimizada
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Adaptación con Google Analytics
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Sistema de contenidos
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Hosting por 1 año
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Dominio por 1 año
+                </li>
               </ul>
-              <button className={styles.precios__button}>Crea tu Sitio Corporativo</button>
+              <button className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition transform hover:translate-y-[-2px]">
+                Crea tu Sitio Corporativo
+              </button>
             </div>
           </div>
-          <div className={styles.precios__item} data-aos="fade-left" data-aos-delay="200">
-            <div className={styles.precios__content}>
-              {/* <Image
-                src="/assets/images/planes/presentador.gif"
-                alt="E-commerce"
-                className={styles.precios__image}
-                layout="responsive"
-                width={500}
-                height={500}
-              /> */}
-              <h4 className={styles.precios__planTitle}>E-commerce</h4>
-              <ul className={styles.precios__list}>
-                <li className={styles.precios__listItem}>7 secciones</li>
-                <li className={styles.precios__listItem}>Correos electrónicos corporativos ilimitados</li>
-                <li className={styles.precios__listItem}>Formulario de contacto</li>
-                <li className={styles.precios__listItem}>Página responsive</li>
-                <li className={styles.precios__listItem}>Adaptación para compartir en RRSS</li>
-                <li className={styles.precios__listItem}>Página SEO optimizada</li>
-                <li className={styles.precios__listItem}>Adaptación con Google Analytics</li>
-                <li className={styles.precios__listItem}>Sistema de contenidos</li>
-                <li className={styles.precios__listItem}>Integración con pasarela de pago</li>
-                <li className={styles.precios__listItem}>Hosting por 1 año</li>
-                <li className={styles.precios__listItem}>Dominio por 1 año</li>
-                <li className={styles.precios__listItem}>Certificado de seguridad SSL</li>
-                <li className={styles.precios__listItem}>Carga de 20 productos</li>
+
+          {/* Plan E-commerce */}
+          <div className="bg-white rounded-lg shadow-lg p-8" data-aos="fade-left" data-aos-delay="200">
+            <div>
+              <h4 className="text-xl font-bold text-blue-800 mb-4">Tienda Online</h4>
+              <ul className="space-y-3 mb-6">
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> 7 secciones
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Correos electrónicos corporativos ilimitados
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Formulario de contacto
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Página responsive
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Adaptación para compartir en RRSS
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Página SEO optimizada
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Adaptación con Google Analytics
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Sistema de contenidos
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Integración con pasarela de pago
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Hosting por 1 año
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Dominio por 1 año
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Certificado de seguridad SSL
+                </li>
+                <li className="relative pl-5">
+                  <span className="absolute left-0">✅</span> Carga de 20 productos
+                </li>
               </ul>
-              <button className={styles.precios__button}>Tu Tienda en Línea</button>
+              <button className="bg-blue-800 text-white py-3 px-6 rounded-lg hover:bg-blue-900 transition transform hover:translate-y-[-2px]">
+                Tu Tienda en Línea
+              </button>
             </div>
           </div>
         </div>

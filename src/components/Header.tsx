@@ -2,7 +2,6 @@
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@public/images/logoIdentidad360_25px.png'; // Ajusta la ruta según sea necesario
 import Modal from './Modal';
 
 
@@ -42,7 +41,7 @@ const Header: React.FC = () => {
       <div className="flex items-center justify-between">
         <Link href="/">
           <Image 
-            src={Logo} 
+            src="/images/logoIdentidad360_25px.png" 
             alt="Logo de IdentidadDigital360" 
             className="w-20 h-auto" // Aquí ajustas el tamaño del logo
             width={30} // Ancho de la imagen en proporción

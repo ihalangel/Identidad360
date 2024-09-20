@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/Hero.module.css';
-import heroImg from '@public/images/cliente-feliz-disfrutando-pagina-web.jpg';
 import Modal from './Modal';
 
 const Hero: React.FC = () => {
@@ -26,12 +25,13 @@ const Hero: React.FC = () => {
 
   return (
     <section className={styles.hero}>
-      <Image
-        src={heroImg}
-        alt="Cliente feliz disfrutando de su página web"
-        className={styles.heroImg}
-        priority
-      />
+     <Image
+      src="images/cliente-feliz-disfrutando-pagina-web.webp"
+      alt="Cliente feliz disfrutando de su página web"
+      layout="fill"
+      className={styles.heroImg}
+      priority
+    />
       <div className={styles.heroContent}>
         <h2 className="hero__title text-3xl font-bold" data-aos="fade-up">
           Diseños Web Profesionales a Precios Accesibles
