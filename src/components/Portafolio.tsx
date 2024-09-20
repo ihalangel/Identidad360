@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     href: "/landing.html",
-    imgSrc: "/images/planes/landing.webp",
+    imgSrc: "/Identidad360/images/planes/landing.webp",
     altText: "Proyecto de Landing Page",
     title: "Landing Page",
     description: "Página de aterrizaje venta de un producto específico.",
@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     href: "/bussines.html",
-    imgSrc: "/images/planes/bussines.webp",
+    imgSrc: "/Identidad360/images/planes/bussines.webp",
     altText: "Proyecto de Barbería",
     title: "Sitio Web para Contadores",
     description: "Diseño responsivo para una firma de contadores.",
@@ -26,7 +26,7 @@ const projects = [
   {
     id: 3,
     href: "/ecommerce.html",
-    imgSrc: "/images/planes/ecommerce.webp",
+    imgSrc: "/Identidad360/images/planes/ecommerce.webp",
     altText: "Proyecto de E-commerce",
     title: "Tienda en Línea de Mascotas",
     description: "Plataforma e-commerce completa con catálogo y pasarela de pago.",

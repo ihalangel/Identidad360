@@ -1,6 +1,7 @@
  /** @type {import('next').NextConfig} */
 
 const isProd = process.env.NODE_ENV === 'production'; // Detecta si estás en producción
+console.log("isProd", isProd);
 
 const nextConfig = {
   // Otras configuraciones
@@ -8,8 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,  // Las imágenes deben estar desoptimizadas para exportación estática
   },
-  assetPrefix: isProd ? '/' : '',  // Prefijo para servir los activos estáticos correctamente en producción
-  basePath: isProd ? '' : '',  // Base path para rutas correctas en producción
+  assetPrefix: isProd ? '/Identidad360/' : '',  // Prefijo para servir los activos estáticos correctamente en producción
+  basePath: isProd ? '/Identidad360' : '',  // Base path para rutas correctas en producción
   // Otros ajustes opcionales
 };
 
