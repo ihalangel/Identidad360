@@ -12,6 +12,9 @@ const nextConfig = {
   assetPrefix: isProd ? '/Identidad360/' : '',  // Prefijo para servir los activos estáticos correctamente en producción
   basePath: isProd ? '/Identidad360' : '',  // Base path para rutas correctas en producción
   // Otros ajustes opcionales
+   publicRuntimeConfig: {
+    basePath: isProd ? '/Identidad360' : '',  // Hacer accesible basePath a los componentes
+  },
 };
 
 export default nextConfig;
