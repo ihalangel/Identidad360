@@ -4,9 +4,16 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/Hero.module.css';
 import Modal from './Modal';
+import getConfig from 'next/config'; // Importa la configuración global de Next.js
+
+const { publicRuntimeConfig } = getConfig(); // Obtiene la configuración pública
+
+const HeroSection = () => {
+
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const basePath = publicRuntimeConfig.basePath || ''; // Usa basePath desde la configuración
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -25,13 +32,13 @@ const Hero: React.FC = () => {
 
   return (
     <section className={styles.hero}>
-     <Image
-      src="/Identidad360/images/cliente-feliz-disfrutando-pagina-web.webp"
-      alt="Cliente feliz disfrutando de su página web"
-      layout="fill"
-      className={styles.heroImg}
-      priority
-    />
+    <Image
+        src={`${basePath}/images/cliente-feliz-disfrutando-pagina-web.webp`}
+        alt="Cliente feliz disfrutando de su página web"
+        layout="fill"
+        priority
+      />
+
       <div className={styles.heroContent}>
         <h2 className="hero__title text-3xl font-bold" data-aos="fade-up">
           Diseños Web Profesionales a Precios Accesibles
