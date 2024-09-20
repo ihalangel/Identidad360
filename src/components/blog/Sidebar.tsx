@@ -10,19 +10,19 @@ const advertisements: Advertisement[] = [
   {
     title: 'Menús Digitales Interactivos con Código QR',
     description: 'Transforma la manera en que presentas tus platos con menús digitales personalizados accesibles por código QR.',
-    ImageUrl: '/Images/publicidad/s-menus-digitales-interactivos-qr.webp',
+    ImageUrl: '/Identidad360/images/publicidad/s-menus-digitales-interactivos-qr.webp',
     link: '#'
   },
   {
     title: 'Desarrollo Profesional de Sitios Web en WordPress: Flexibilidad, Control Total y Bajo Costo',
     description: 'Descubre cómo el desarrollo profesional de sitios web en WordPress te permite tener control absoluto sobre tu presencia en línea. A diferencia de plataformas de terceros que imponen tarifas crecientes y limitaciones, WordPress te ofrece flexibilidad total, optimización avanzada de SEO, y costos significativamente menores a largo plazo. Ideal para emprendedores y empresas que buscan una solución poderosa y económica para el crecimiento en línea.',
-    ImageUrl: '/Images/publicidad/desarrollo-profesional-sitios-web-wordpress.webp',
+    ImageUrl: '/Identidad360/images/publicidad/desarrollo-profesional-sitios-web-wordpress.webp',
     link: '#'
   },
   {
     title: 'Landing Page Sencilla y Poderosa en React',
     description: 'Convierte más visitantes con landing pages rápidas, optimizadas y personalizadas en React. Ideales para potenciar tus campañas de marketing y maximizar tu ROI.',
-    ImageUrl: '/Images/publicidad/s-landing-page-sencilla-react-next.webp',
+    ImageUrl: '/Identidad360/images/publicidad/s-landing-page-sencilla-react-next.webp',
     link: '#'
   }
 ];
