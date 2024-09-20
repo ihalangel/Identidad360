@@ -96,9 +96,9 @@ identidad360/
 │   │       |---components/
                     |-RelatedLinks.tsx
 
-    |__ data/
+|    |__ data/
          |__posts.json
-         |
+         
     |
 │   ├── styles/
 │   │   ├── globals.css                   // Estilos globales
