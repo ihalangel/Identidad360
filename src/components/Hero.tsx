@@ -8,7 +8,7 @@ import getConfig from 'next/config'; // Importa la configuración global de Next
 
 const { publicRuntimeConfig } = getConfig(); // Obtiene la configuración pública
 
-const HeroSection = () => {
+
 
 
 const Hero: React.FC = () => {
