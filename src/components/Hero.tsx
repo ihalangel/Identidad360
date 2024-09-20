@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
   return (
     <section className={styles.hero}>
      <Image
-      src="images/cliente-feliz-disfrutando-pagina-web.webp"
+      src="/images/cliente-feliz-disfrutando-pagina-web.webp"
       alt="Cliente feliz disfrutando de su página web"
       layout="fill"
       className={styles.heroImg}
