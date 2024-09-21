@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 500px; /* Fija la altura del hero */
+  min-height: 500px; /* Fija la altura del hero */
   overflow: hidden; /* Oculta el desbordamiento */
   text-align: center;
   color: #ffffff;
