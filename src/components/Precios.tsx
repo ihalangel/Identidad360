@@ -2,9 +2,8 @@ import React from 'react';
 
 const Precios: React.FC = () => {
   return (
-    <section id="precios" className="py-6 bg-gray-100">
+    <section id="precios" className="py-12 bg-gray-100">
       <div className="container mx-auto max-w-screen-lg">
-
         <h3 className="text-3xl font-bold text-center text-blue-800 mb-8" data-aos="fade-up">
           Nuestros Planes
         </h3>

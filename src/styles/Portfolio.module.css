@@ -47,6 +47,14 @@
   margin-bottom: 1rem;
 }
 
+.portfolioItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem; /* Reduce el margen inferior */
+}
+
+.portfolioItem p {
+  margin-bottom: 0.5rem; /* Reduce el margen inferior */
+}
 
 .portfolioItem blockquote {
   color: #6B7280;
@@ -60,19 +68,5 @@
 @media (max-width: 640px) {
   .portfolioSection {
     padding: 2rem 0.5rem; /* Reduce el padding en pantallas pequeñas */
-
-
   }
-
-.portfolioItem h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem; /* Reduce el margen inferior */
-}
-
-.portfolioItem p {
-  margin-bottom: 0.5rem; /* Reduce el margen inferior */
-}
-
-
-
 }
