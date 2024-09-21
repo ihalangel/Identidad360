@@ -9,6 +9,8 @@ interface BlogListProps {
 }
 
 const BlogList: React.FC<BlogListProps> = ({ posts }) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  
   return (
     <div className="space-y-6 md:space-y-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -19,7 +21,8 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
 
 
 <Image 
-  src={post.image} 
+                src={`${basePath}${post.image}`}
+
   alt={post.title} 
    width={500} // Puedes ajustar el tamaño según lo que necesites
    height={192} // Equivalente a la altura "h-48"

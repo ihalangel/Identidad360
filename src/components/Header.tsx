@@ -9,6 +9,8 @@ const Header: React.FC = () => {
  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,12 +51,12 @@ const Header: React.FC = () => {
           />
         </Link>
         <nav className="hidden md:flex space-x-4">
-          <Link href="/blog">
+          <Link href={`/blog/`}>
             <span className="text-white hover:text-gray-300 transition-colors duration-300">Blog</span>
           </Link>
-          <a href="/#servicios" className="text-white hover:text-gray-300 transition-colors duration-300">Servicios</a>
-          <a href="/#precios" className="text-white hover:text-gray-300 transition-colors duration-300">Precios</a>
-          <a href="#" className="text-white hover:text-gray-300 transition-colors duration-300" 
+          <a href={`${basePath}#servicios`} className="text-white hover:text-gray-300 transition-colors duration-300">Servicios</a>
+          <a href={`${basePath}/#precios`} className="text-white hover:text-gray-300 transition-colors duration-300">Precios</a>
+          <a href={`${basePath}/#`} className="text-white hover:text-gray-300 transition-colors duration-300" 
           onClick={openModal} >Contacto</a>
         </nav>
         <button 
@@ -70,13 +72,16 @@ const Header: React.FC = () => {
         id="nav-menu" 
         className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} absolute top-16 right-0 bg-primary w-full p-4 z-50`}
       >
-        <Link href="./#servicios">
+         <Link href={`/blog/`}>
+            <span className="block py-2 text-white hover:text-gray-300">Blog</span>
+          </Link>
+        <Link href={`${basePath}#servicios`}>
           <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Servicios</span>
         </Link>
-        <Link href="./#precios">
+        <Link href={`${basePath}/#precios`}>
           <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Precios</span>
         </Link>
-        <Link href="./#contacto">
+        <Link href={`${basePath}#contacto`}>
           <span className="block py-2 text-white hover:text-gray-300" onClick={handleNavLinkClick}>Contacto</span>
         </Link>
       </nav>

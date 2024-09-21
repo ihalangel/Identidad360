@@ -4,16 +4,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '@/styles/Hero.module.css';
 import Modal from './Modal';
-import getConfig from 'next/config'; // Importa la configuración global de Next.js
-
-const { publicRuntimeConfig } = getConfig(); // Obtiene la configuración pública
-
-
 
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const basePath = publicRuntimeConfig.basePath || ''; // Usa basePath desde la configuración
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   const openModal = () => {
     setIsModalOpen(true);

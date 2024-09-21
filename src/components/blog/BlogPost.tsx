@@ -13,6 +13,8 @@ const defaultRelatedLinks = [
   { title: 'Cómo utilizar Google Analytics para mejorar tu sitio web', url: '/blog/utilizar-google-analytics-mejorar-sitio-web' },
 ];
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 interface BlogPostProps {
   title: string;
   description: string;
@@ -45,7 +47,7 @@ const BlogPost: React.FC<BlogPostProps> = ({
           <div className="flex flex-col lg:flex-row lg:gap-8 mb-8">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <Image
-                src={image}
+                src={`${basePath}${image}`}
                 alt={alt}
                 width={600}
                 height={400}

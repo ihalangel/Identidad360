@@ -3,12 +3,13 @@
 import React from 'react';
 import Image from 'next/image'; // Usar el componente Image de Next.js
 import styles from '@/styles/Portfolio.module.css'; // Importa el CSS como módulo
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const projects = [
   {
     id: 1,
     href: "/landing.html",
-    imgSrc: "/Identidad360/images/planes/landing.webp",
+    imgSrc: `${basePath}/images/planes/landing.webp`,
     altText: "Proyecto de Landing Page",
     title: "Landing Page",
     description: "Página de aterrizaje venta de un producto específico.",
@@ -17,7 +18,7 @@ const projects = [
   {
     id: 2,
     href: "/bussines.html",
-    imgSrc: "/Identidad360/images/planes/bussines.webp",
+    imgSrc: `${basePath}/images/planes/bussines.webp`,
     altText: "Proyecto de Barbería",
     title: "Sitio Web para Contadores",
     description: "Diseño responsivo para una firma de contadores.",
@@ -26,7 +27,7 @@ const projects = [
   {
     id: 3,
     href: "/ecommerce.html",
-    imgSrc: "/Identidad360/images/planes/ecommerce.webp",
+    imgSrc: `${basePath}/images/planes/ecommerce.webp`,
     altText: "Proyecto de E-commerce",
     title: "Tienda en Línea de Mascotas",
     description: "Plataforma e-commerce completa con catálogo y pasarela de pago.",
@@ -58,7 +59,7 @@ const Portfolio: React.FC = () => {
               onClick={() => handleClick(project.title)}
             >
               <Image 
-                src={project.imgSrc} 
+                src={`${ basePath}${project.imgSrc}`} 
                 alt={project.altText} 
                 className="w-full h-64 object-cover mb-4" 
                width={1920} 
