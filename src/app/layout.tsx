@@ -15,31 +15,36 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     AOS.init();
   }, []);
 
+  // Función que se ejecuta cuando el usuario acepta las cookies
   const handleAcceptCookies = () => {
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag('js', new Date());
-    window.gtag('config', 'G-9R4Q3DF83V', { 'cookie_flags': 'SameSite=None;Secure' });
+    if (typeof window !== 'undefined') {
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-9R4Q3DF83V', { 'cookie_flags': 'SameSite=None;Secure' });
+    }
   };
 
   return (
     <html lang="es">
       <head>
+        {/* Google Analytics Script */}
         <Script
           id="google-analytics"
           strategy="afterInteractive"
-        >
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-9R4Q3DF83V'); // Reemplaza con tu ID de Google Analytics
-          `}
-        </Script>
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+            `,
+          }}
+        />
       </head>
       <body>
         <Header />
         <main>{children}</main>
         <Footer />
+
+        {/* Cookie Consent */}
         <CookieConsent
           buttonText="Acepto"
           cookieName="user-consent"
@@ -50,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Este sitio usa cookies para mejorar la experiencia. Al continuar navegando, aceptas su uso.
         </CookieConsent>
+
       </body>
     </html>
   );

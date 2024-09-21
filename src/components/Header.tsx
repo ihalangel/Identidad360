@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       <div className="flex items-center justify-between">
         <Link href="/">
           <Image 
-            src="/Identidad360/images/logoIdentidad360_25px.png" 
+            src={`${basePath}/images/logoIdentidad360_25px.png`} 
             alt="Logo de IdentidadDigital360" 
             className="w-20 h-auto" // Aquí ajustas el tamaño del logo
             width={30} // Ancho de la imagen en proporción
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           <Link href={`/blog/`}>
             <span className="text-white hover:text-gray-300 transition-colors duration-300">Blog</span>
           </Link>
-          <a href={`${basePath}#servicios`} className="text-white hover:text-gray-300 transition-colors duration-300">Servicios</a>
+          <a href={`${basePath}/#servicios`} className="text-white hover:text-gray-300 transition-colors duration-300">Servicios</a>
           <a href={`${basePath}/#precios`} className="text-white hover:text-gray-300 transition-colors duration-300">Precios</a>
           <a href={`${basePath}/#`} className="text-white hover:text-gray-300 transition-colors duration-300" 
           onClick={openModal} >Contacto</a>

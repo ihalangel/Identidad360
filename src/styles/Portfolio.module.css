@@ -41,10 +41,12 @@
   margin-bottom: 0.5rem;
 }
 
+
 .portfolioItem p {
   color: #4A4A4A;
   margin-bottom: 1rem;
 }
+
 
 .portfolioItem blockquote {
   color: #6B7280;
@@ -52,4 +54,25 @@
   border-left: 4px solid #1E3A8A;
   padding-left: 1rem;
   margin-top: 1rem;
+}
+
+
+@media (max-width: 640px) {
+  .portfolioSection {
+    padding: 2rem 0.5rem; /* Reduce el padding en pantallas pequeñas */
+
+
+  }
+
+.portfolioItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem; /* Reduce el margen inferior */
+}
+
+.portfolioItem p {
+  margin-bottom: 0.5rem; /* Reduce el margen inferior */
+}
+
+
+
 }

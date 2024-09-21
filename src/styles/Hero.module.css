@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 500px; /* Fija la altura del hero */
+  height: 500px; /* Fija la altura del hero */
   overflow: hidden; /* Oculta el desbordamiento */
   text-align: center;
   color: #ffffff;
@@ -53,4 +53,29 @@
 
 .heroButton:active {
   transform: scale(0.98);
+}
+
+
+
+@media (max-width: 640px) {
+
+.hero {
+  position: relative;
+  height: 400px; /* Fija la altura del hero */
+  overflow: hidden; /* Oculta el desbordamiento */
+  text-align: center;
+  color: #ffffff;
+}
+
+.heroImg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  object-position: top right;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
 }
