@@ -6,11 +6,12 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CookieConsent from 'react-cookie-consent';
+import Cookies from 'js-cookie'; // Para manejar cookies de forma fácil
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [cookiesAccepted, setCookiesAccepted] = useState(false); // Estado para controlar el consentimiento de cookies
+  const [cookiesAccepted, setCookiesAccepted] = useState(false); // Estado para manejar si las cookies han sido aceptadas
 
   // Función gtag solo se ejecutará si las cookies son aceptadas
   const gtag = (...args: any[]) => {
@@ -21,6 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
 
   useEffect(() => {
+    // Verificar si el usuario ya ha aceptado las cookies previamente
+    const consent = Cookies.get('user-consent'); // Leer la cookie 'user-consent'
+
+    if (consent === 'true') {
+      setCookiesAccepted(true); // Si ya aceptó, actualizar el estado
+    }
+
     if (cookiesAccepted && typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
 
@@ -35,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
       // Inicializar Google Analytics
       window.gtag('js', new Date());
-      window.gtag('config', 'G-9R4Q3DF83V', { cookie_flags: 'SameSite=None;Secure' });
+      window.gtag('config', 'G-7SGN0GSQB7', { cookie_flags: 'SameSite=None;Secure' });
 
       // Inicializar AOS solo después de la aceptación de cookies
       AOS.init();
@@ -46,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const handleAcceptCookies = () => {
     console.log('Cookies accepted, initializing Google Analytics');
     setCookiesAccepted(true); // Actualizar el estado cuando se acepten las cookies
+    Cookies.set('user-consent', 'true', { expires: 365 }); // Guardar el consentimiento en una cookie
   };
 
   return (
