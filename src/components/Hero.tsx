@@ -23,6 +23,8 @@ const Hero: React.FC = () => {
     }
   };
 
+  
+
   const closeModal = () => setIsModalOpen(false);
 
   return (
