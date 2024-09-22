@@ -13,14 +13,6 @@ import Footer from '../components/Footer';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(false); // Estado para manejar si las cookies han sido aceptadas
 
-  // Función gtag solo se ejecutará si las cookies son aceptadas
-  const gtag = (...args: any[]) => {
-    if (typeof window !== 'undefined' && cookiesAccepted) {
-      console.log('gtag called with args:', args);
-      window.dataLayer.push(args);
-    }
-  };
-
   useEffect(() => {
     // Verificar si el usuario ya ha aceptado las cookies previamente
     const consent = Cookies.get('user-consent'); // Leer la cookie 'user-consent'
@@ -31,12 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     if (cookiesAccepted && typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
+      window.gtag = (...args: any[]) => {
+        console.log('gtag called with args:', args);
+        window.dataLayer.push(args);
+      };
 
-      // Definir gtag como una función global en window
-      window.gtag = gtag; // Usar la función gtag definida arriba
       console.log('Google Analytics initialized');
-
-      // Inicializar Google Analytics
       window.gtag('js', new Date());
       window.gtag('config', 'G-7SGN0GSQB7', { cookie_flags: 'SameSite=None;Secure' });
 
@@ -56,6 +48,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es">
       <head>
         {/* Meta y otros scripts necesarios */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SGN0GSQB7"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </script>
       </head>
       <body>
         <Header />
