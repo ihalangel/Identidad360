@@ -47,7 +47,7 @@ const Contacto: React.FC = () => {
         // Enviar evento a Google Analytics
         sendEvent('form_submit', {
           event_category: 'Contacto',
-          event_label: 'Formulario de contacto',
+          event_label: 'Formulario de contacto enviado Next',
           value: 1
         });
       })
@@ -73,7 +73,7 @@ const Contacto: React.FC = () => {
                 setShowForm(true);
                 sendEvent('form_open', {
                   event_category: 'Contacto',
-                  event_label: 'Formulario de contacto abierto',
+                  event_label: 'Formulario de contacto abierto Next',
                   value: 1
                 });
               }}
