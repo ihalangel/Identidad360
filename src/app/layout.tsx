@@ -33,12 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       window.dataLayer = window.dataLayer || [];
 
       // Definir gtag como una función global en window
-      window.gtag = (...args: any[]) => {
-        console.log('gtag called with args:', args);
-        window.dataLayer.push(args);
-      };
-
-      // Log para asegurarse de que se está inicializando correctamente
+      window.gtag = gtag; // Usar la función gtag definida arriba
       console.log('Google Analytics initialized');
 
       // Inicializar Google Analytics
