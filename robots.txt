@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ihalangel.github.io/Identidad360/
+
+# Sitemaps
+Sitemap: https://ihalangel.github.io/Identidad360/sitemap.xml

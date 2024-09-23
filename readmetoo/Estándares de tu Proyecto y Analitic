@@ -1,0 +1,27 @@
+Estándares de tu Proyecto
+Plataforma: Sitio web construido en Next.js.
+Implementación de Google Analytics:  utilizando gtag en el head en el layout del app/.
+Consentimiento de Cookies: utilizando un componente de Cookie Consent para gestionar el consentimiento del usuario
+antes de inicializar Google Analytics.
+
+Estructura del Código:
+El script de Google Analytics se carga de forma asíncrona en el <head>.
+La inicialización de GA se realiza solo si el usuario ha aceptado las cookies.
+Se utiliza un estado en React (cookiesAccepted) para gestionar si las cookies han sido aceptadas.
+No hay conflictos: El código está diseñado para evitar conflictos al inicializar gtag solo después de que se ha aceptado el consentimiento.
+Verificación del ID de Propiedad: ID  correctamente configurado.
+
+
+Aspectos a ConsiderarCarga Correcta del Script: Asegúrate de que el script de Google Analytics se esté cargando antes de cualquier llamada a gtag.
+Monitoreo de Errores: Si encuentras errores en la consola o en Google Analytics, revisa la documentación para entender el contexto del error y cómo solucionarlo.
+Pasos a Seguir
+Pruebas: Haz pruebas para verificar que los eventos se registran correctamente en Google Analytics.
+Monitoreo: Revisa regularmente la consola y Google Analytics para detectar problemas de implementación.
+Ajustes de Código: Si se presentan problemas, ajusta el código según las mejores prácticas y los errores encontrados.
+Con estos puntos claros, podrás gestionar mejor la integración de Google Analytics en tu proyecto. ¿Te gustaría profundizar en alguno de estos aspectos?
+
+
+
+
+
+

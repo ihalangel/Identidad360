@@ -1,0 +1,316 @@
+identidad360/
+│
+├── public/
+│   ├── favicon.ico
+│   └── other-assets/
+│
+├── src/
+│   ├── app/
+│   │   │__favicon.ico 
+│   │   ├── layout.tsx  (Nuevo archivo)
+│   │   ├── page.tsx    (Equivale a index.js)
+│   │   ├── blog/
+│   │   │   ├── page.tsx  (Equivale a blog/index.js)
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx  (Equivale a blog/[slug].js)
+│   │   └── api/
+│   │       └── hello/   
+│   │           └── route.ts  (Equivale a api/hello.js)
+│   │
+│   ├── components/
+│   │   │                                               
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Services.tsx
+│   │   ├── Precios.tsx
+│   │   ├── Portafolio.tsx
+│   │   ├── Testimonios.tsx
+│   │   ├── Contacto.tsx
+│   │   ├── Footer.tsx
+│   │   └── blog/
+│   │       ├── BlogList.tsx
+│   │       └── BlogPost.tsx
+│   │
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── App.css
+│   │   └── Base.css                                
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Services.tsx
+│   │   ├── Precios.tsx
+│   │   ├── Portafolio.tsx
+│   │   ├── Testimonios.tsx
+│   │   ├── Contacto.tsx
+│   │
+│   └── utils/
+│       └── analytics.ts
+│        --- posts.ts
+├── .gitignore
+├── package.json
+├── next.config.js
+└── README.md
+
+
+
+
+
+
+
+identidad360/
+│
+├── public/
+│   ├── favicon.ico
+│   └── images/
+    │      |--planes
+           |--post
+           |--publicidad
+     --js/
+     otros archivos
+    │
+├── src/
+│   ├── app/
+│   │   ├── favicon.ico                   // Icono de la aplicación
+│   │   ├── layout.tsx                    // Layout principal de la aplicación
+│   │   ├── page.tsx                      // Página principal (equivalente a index.js)
+│   │   ├── blog/
+│   │   │   ├── page.tsx                  // Página principal del blog (equivalente a blog/index.js)
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx              // Página de cada artículo del blog (equivalente a blog/[slug].js)
+│   │   └── api/
+│   │       └── hello.ts                // API route (equivalente a api/hello.js)
+│   │
+│   ├── components/
+│   │   ├── Header.tsx                    // Componente Header
+│   │   ├── Hero.tsx                      // Componente Hero
+│   │   ├── Services.tsx                  // Componente Services
+│   │   ├── Precios.ts|x                   // Componente Precios
+│   │   ├── Portafolio.tsx                // Componente Portafolio
+│   │   ├── Testimonios.tsx               // Componente Testimonios
+│   │   ├── Contacto.tsx                  // Componente Contacto
+│   │   ├── Footer.tsx                    // Componente Footer
+│   │   └── blog/
+│   │       ├── BlogList.tsx              // Componente para la lista de artículos del blog
+│   │       └── BlogPost.tsx              // Componente para un artículo del blog
+            |__SideBar.tsx
+│   │       |---components/
+                    |-RelatedLinks.tsx
+
+|    |__ data/
+         |__posts.json
+         
+    |
+│   ├── styles/
+│   │   ├── globals.css                   // Estilos globales
+│   │   ├── App.css                       // Estilos específicos para la aplicación
+│   │   ├── Base.css                      // Estilos base
+│   │   ├── Header.module.css             // Estilos específicos para el Header
+│   │   ├── Hero.module.css               // Estilos específicos para el Hero
+│   │   ├── Services.module.css           // Estilos específicos para Services
+│   │   ├── Precios.module.css            // Estilos específicos para Precios
+│   │   ├── Portafolio.module.css         // Estilos específicos para Portafolio
+│   │   ├── Testimonios.module.css        // Estilos específicos para Testimonios
+│   │   ├── Contacto.module.css           // Estilos específicos para Contacto
+│   │   ├── BlogList.module.css           // Estilos específicos para la lista de blogs
+│   │   └── BlogPost.module.css           // Estilos específicos para los artículos del blog
+│   │
+│   └── utils/
+│       ├── analytics.ts                  // Utilidades para análisis
+│       └── posts.ts                     // Utilidades para manejar los posts del blog
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│_______Types
+        │
+        │-globals.d.ts
+        │-index.d.ts
+        │-
+
+
+
+
+├── .gitignore
+├── package.json
+├── next.config.js
+     postcss.config.mjs 
+   tailwind.config.ts
+   tsconfig.json
+
+└── README.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+************************************888
+*****
+***
+EXTRUCTURA COMPACTA
+***
+*******
+***************************************
+
+
+/my-project
+  /public
+    // Archivos públicos (imágenes, favicon, etc.)
+  /src
+    /components
+      // Componentes React
+    /pages
+      // Páginas del proyecto
+    /styles
+      // Archivos CSS/SCSS
+    /types
+      // Archivos de tipos TypeScript
+        global.d.ts
+        index.ts
+    // Otros archivos y carpetas
+  /types
+    // Alternativamente, puedes tener un directorio de tipos en la raíz si es necesario
+  tsconfig.json
+  package.json
