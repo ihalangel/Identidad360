@@ -9,6 +9,7 @@ import CookieConsent from 'react-cookie-consent';
 import Cookies from 'js-cookie';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -43,14 +44,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SGN0GSQB7"></script>
-        <script>
+        <Script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=G-7SGN0GSQB7" 
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           `}
-        </script>
+        </Script>
       </head>
       <body>
         <Header />
@@ -70,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
 
 
  
