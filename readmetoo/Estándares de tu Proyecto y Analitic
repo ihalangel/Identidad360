@@ -12,8 +12,8 @@ No hay conflictos: El código está diseñado para evitar conflictos al iniciali
 Verificación del ID de Propiedad: ID  correctamente configurado.
 
 
-Aspectos a ConsiderarCarga Correcta del Script: Asegúrate de que el script de Google Analytics se esté cargando antes de cualquier llamada a gtag.
-Monitoreo de Errores: Si encuentras errores en la consola o en Google Analytics, revisa la documentación para entender el contexto del error y cómo solucionarlo.
+Aspectos a ConsiderarCarga Correcta del Script: 
+Asegúrate de que el script de Google Analytics se esté cargando antes de cualquier llamada a gtag.
 Pasos a Seguir
 Pruebas: Haz pruebas para verificar que los eventos se registran correctamente en Google Analytics.
 Monitoreo: Revisa regularmente la consola y Google Analytics para detectar problemas de implementación.
@@ -23,5 +23,20 @@ Con estos puntos claros, podrás gestionar mejor la integración de Google Analy
 
 
 
+Personal 
+Monitoreo de Errores: Si encuentras errores en la consola o en Google Analytics, revisa la documentación para entender el contexto del error y cómo solucionarlo.
+
+
+
+
+
+
+
+
+
+
+
+Errores a resolver :
+Busqueda de  Identidad360.txt
 
 
