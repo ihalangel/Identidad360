@@ -1,0 +1,28 @@
+Error intenta buscar archivo Identidad360.txt  en la ruta main del sitio: https://ihalangel.github.io/Identidad360
+haciendola lucir : https://ihalangel.github.io/Identidad360.txt
+
+Resumen del Proyecto
+Tecnología Utilizada:
+Next.js: Framework para React que permite la generación de páginas estáticas y dinámicas.
+TypeScript: Usado para escribir componentes como Header.tsx, mejorando la calidad del código con tipado estático.
+Tailwind CSS: Para estilos, promoviendo un enfoque de diseño rápido y responsivo.
+Estructura de Archivos:
+
+Rutas Principales:
+/ - Página de inicio
+/blog - Página principal del blog
+/blog/[slug] - Páginas dinámicas para entradas de blog
+Archivos .txt: Se han identificado archivos como Identidad360.txt, blog.txt, y index.txt en la raíz del proyecto, pero no se han podido localizar a través de búsquedas en el proyecto.
+Construcción del Proyecto:
+
+El comando npm run build se ejecutó correctamente, generando una construcción optimizada y creando un sitemap.
+Se generó un sitemap accesible en https://ihalangel.github.io/Identidad360/sitemap.xml, que incluye las rutas estáticas.
+Problemas Encontrados:
+
+Búsqueda de Archivos: Las búsquedas realizadas no mostraron los archivos .txt en la salida esperada, aunque existen en la raíz del directorio.
+Accesibilidad de Archivos Estáticos: No se pudo acceder directamente a Identidad360.txt después de la construcción, sugiriendo problemas potenciales en la inclusión de estos archivos en la construcción final.
+Elementos Descartados
+Rutas Incorrectas: Se descartaron rutas relativas como #, ./, o /, ya que no ayudaron en la búsqueda de los archivos .txt.
+Problemas de Configuración: Se descartaron configuraciones de plugins que puedan estar excluyendo archivos estáticos sin intención.
+
+
